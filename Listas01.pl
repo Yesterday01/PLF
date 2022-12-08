@@ -116,8 +116,8 @@ cumplan con la condición.
 ->Valor de retorno: Devuelve una lista, con los elementos que sean menores al primer elemento de la lista del primer termino.
 */
 menorHead([_|[]],[]).
-menorHead([A1,A2|B],[A2|L]) :- A1 > A2, menorHead2([A1|B],L).
-menorHead([A1,A2|B],L) :- A1 =< A2, menorHead2([A1|B],L).
+menorHead([A1,A2|B],[A2|L]) :- A1 > A2, menorHead([A1|B],L).
+menorHead([A1,A2|B],L) :- A1 =< A2, menorHead([A1|B],L).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 11.PREDICADO MAYORHEAD %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 /*
